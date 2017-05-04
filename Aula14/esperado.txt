@@ -1,0 +1,9 @@
+circulo
+p.in = (23, 16)
+dim = 20x20
+pontos na borda = 52
+
+oval
+p.in = (139, 51)
+dim = 196x61
+pontos na borda = 407
