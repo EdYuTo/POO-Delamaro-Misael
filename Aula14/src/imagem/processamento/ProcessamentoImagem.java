@@ -119,8 +119,8 @@ public class ProcessamentoImagem {
 								proximo[1] = inicio[1] + j;//prox
 								proximo[2] = inicio[0];//novo anterior
 								proximo[3] = inicio[1];//novo anterior
-								if (i+j == 1 || i+j == -1) this.perimeter += 1;//linha reta + raiz de (1+0)
-								else this.perimeter += Math.sqrt(2);//diagonais + raiz de (1+1)
+								if (i+j == 1 || i+j == -1) this.perimeter += 1;//novo ponto em linha reta, perimetro += raiz de (1+0)
+								else this.perimeter += Math.sqrt(2);//novo ponto na diagonal, perimetro += raiz de (1+1)
 								return proximo;
 							}
 		return null;//erro
