@@ -2,23 +2,32 @@ package grafo.grafo;
 
 import java.util.Iterator;
 import java.util.TreeSet;
-import grafo.vertice.Vertice;
+//import grafo.vertice.Vertice;
 import grafo.aresta.Aresta;
 
 public class Grafo extends TreeSet<Aresta> {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 6913966047160131711L;
-
-	public Vertice[] dijkstra(String origem, String destino) {
+	private static final long serialVersionUID = 6913966047160131711L; //compilador que pediu...
+	
+	public void dijkstra(String origem, String destino) {
 		if (origem != null && destino != null) {
-			int tam = Integer.MAX_VALUE;
-			Iterator<Aresta> iterator = super.iterator();
-			if (iterator.next().getOrigem().getNome() == origem && iterator.next().getValor() < tam)
-				//faz ate achar menor caminho depois tem q fazer ate achar o caminho ate o destino...
+			System.out.print(origem + " ");
+			if (!origem.equals(destino)) {
+				double tam = Double.MAX_VALUE;
+				String proximo = "";
+				Aresta aux;
+				Iterator<Aresta> iterator = super.iterator();
+				while (iterator.hasNext()) {
+					aux = iterator.next();
+					if (aux.getOrigem().getNome().equals(origem) && aux.getValor() < tam) {
+						tam = aux.getValor();
+						proximo = aux.getDestino().getNome();
+					}
+				}
+				if (proximo != null && !proximo.isEmpty())
+					this.dijkstra(proximo, destino);
+			}
 		}
-		return null;//erro
+		return;
 	}
 }
