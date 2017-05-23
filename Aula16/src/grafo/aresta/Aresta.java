@@ -24,7 +24,7 @@ public class Aresta implements Comparable<Aresta> {
 		return valor;
 	}
 	
-	public int compareTo(Aresta outra) {
+	public int compareTo(Aresta outra) {//leva em consideracao grafos digrafos apenas, o if trata o caso a->b, b->a
 		if (this.origem.compareTo(outra.origem) + this.destino.compareTo(outra.destino) + Double.compare(this.valor, outra.valor) == 0)
 			return this.origem.compareTo(outra.origem) - this.destino.compareTo(outra.destino) + Double.compare(this.valor, outra.valor);
 		return this.origem.compareTo(outra.origem) + this.destino.compareTo(outra.destino) + Double.compare(this.valor, outra.valor);

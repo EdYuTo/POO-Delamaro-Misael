@@ -1,0 +1,25 @@
+Entrada:
+9
+A B 7
+A C 9
+A F 14
+B D 15
+B C 10
+C D 11
+C F 2
+F E 9
+D E 6
+A E
+
+Saida esperada:
+a b c f e
+
+Lembrando que caso a main seja utilizada deve-se digitar linha a linha.
+Ex:
+9
+A
+B
+7
+...
+
+1.in contem a entrada linha a linha para testes.

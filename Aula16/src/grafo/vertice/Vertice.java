@@ -2,7 +2,6 @@ package grafo.vertice;
 
 public class Vertice implements Comparable<Vertice> {
 	private String nome;
-	private static int quantidade = 0;
 	
 	public Vertice(String nome) {
 		this.nome = nome;
@@ -10,10 +9,6 @@ public class Vertice implements Comparable<Vertice> {
 
 	public String getNome() {
 		return nome;
-	}
-	
-	public static int getQuantidade() {
-		return quantidade;
 	}
 
 	public int compareTo(Vertice outro) {

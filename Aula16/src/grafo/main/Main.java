@@ -31,7 +31,7 @@ public class Main {
 			
 			System.out.println("Digite o destino da aresta " + i + ":");
 			destino = keyboard.nextLine();
-			destino.toLowerCase();//unificar
+			destino = destino.toLowerCase();//unificar
 			
 			System.out.println("Digite o valor da aresta " + i + ":");
 			valor = keyboard.nextDouble();
